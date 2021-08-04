@@ -1,4 +1,4 @@
-name: UNIT-TESTS
+name: TESTS
 
 on:
   push:
@@ -9,8 +9,8 @@ on:
     types: [ready_for_review, synchronize, opened]
 
 jobs:
-  unit:
-    name: UNIT TESTS
+  tests:
+    name: TESTS
     runs-on: ubuntu-latest
 
     strategy:
