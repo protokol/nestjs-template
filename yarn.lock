@@ -675,10 +675,10 @@
     consola "^2.15.0"
     node-fetch "^2.6.1"
 
-"@sindresorhus/tsconfig@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@sindresorhus/tsconfig/-/tsconfig-2.0.0.tgz#610e1cb8ed4e1cb7ff0cb4cb8712cd607315c152"
-  integrity sha512-1nsyWtFtPpVjEnNzp2rd03BVz84BYHeW7LNYvmcj3q4jAgJL2hl0XBp3WmDFFPjFLF3w+L0XEYqhjWUTU+TCzw==
+"@sindresorhus/tsconfig@^8.0.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/tsconfig/-/tsconfig-8.1.0.tgz#c09c74f87a107a7941bb251bbbaab0c2a48c43e1"
+  integrity sha512-MggpguA4jNdtyoUy2Hs54nb4lP4rbhH34CsOiFId1q6fmFPnipqeo70ZRkjp5p4Z7wdyspALtSAcKaxL2/3waQ==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
