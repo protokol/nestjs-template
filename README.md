@@ -46,7 +46,30 @@ $ pnpm start:prod
 
 ## Health check
 
-The application exposes a `GET /health` endpoint suitable for liveness and readiness probes. Once a database or broker is introduced, migrate it to [`@nestjs/terminus`](https://docs.nestjs.com/recipes/terminus).
+The application exposes a `GET /health` endpoint suitable for liveness and readiness probes. To wire the database into the health check, migrate it to [`@nestjs/terminus`](https://docs.nestjs.com/recipes/terminus) and use `TypeOrmHealthIndicator`.
+
+## Database
+
+The template ships with [TypeORM](https://typeorm.io) connected to PostgreSQL (see `src/database`). Entities are loaded automatically (`autoLoadEntities`), and migrations run on application startup (`migrationsRun` in `src/database/typeorm-options.ts`).
+
+A sampled domain (`src/notes`) demonstrates the end-to-end pattern: entity + migration + repository service + controller.
+
+Migrations are executed with the TypeORM CLI against `src/database/data-source.ts`:
+
+```bash
+# generate a migration from entity changes
+$ pnpm migration:generate -- ChangeSomething
+
+# run pending migrations
+$ pnpm migration:run
+
+# revert the last migration
+$ pnpm migration:revert
+```
+
+When generating or running migrations, a local PostgreSQL instance (e.g. the `postgres` service from `docker compose`) must be reachable and `DATABASE_*` variables configured in `.env`.
+
+Schema auto-sync from entities is available through `DATABASE_SYNCHRONIZE=true` for local experimentation only — migrations remain the source of truth and `synchronize` must stay disabled in production.
 
 ## Docker
 
@@ -54,7 +77,7 @@ The application exposes a `GET /health` endpoint suitable for liveness and readi
 # build the image
 $ docker compose build
 
-# run it
+# run it (postgres service included)
 $ docker compose up
 ```
 
@@ -70,6 +93,8 @@ $ pnpm test:e2e
 # test coverage (enforces thresholds from jest.config.ts)
 $ pnpm test:cov
 ```
+
+Tests never need a live PostgreSQL: `DatabaseModule.forRoot()` swaps the real TypeORM data source for an in-memory mock repository setup (see `src/database/mock-database.module.ts`) when `NODE_ENV=test`, and services are tested against `MockRepository` via `__tests__/mocks/repository.mock.ts`.
 
 ## Lint & Format
 

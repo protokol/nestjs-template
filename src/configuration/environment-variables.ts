@@ -1,5 +1,5 @@
 import { plainToInstance } from "class-transformer";
-import { IsEnum, IsInt, IsOptional, IsString, Max, Min, validateSync } from "class-validator";
+import { IsEnum, IsIn, IsInt, IsOptional, IsString, Max, Min, validateSync } from "class-validator";
 
 export enum NodeEnvironment {
 	Development = "development",
@@ -21,6 +21,36 @@ export class EnvironmentVariables {
 	@IsString()
 	@IsOptional()
 	public CORS_ORIGINS?: string;
+
+	@IsString()
+	@IsOptional()
+	public DATABASE_HOST?: string;
+
+	@IsInt()
+	@Min(1)
+	@Max(65535)
+	@IsOptional()
+	public DATABASE_PORT?: number;
+
+	@IsString()
+	@IsOptional()
+	public DATABASE_USERNAME?: string;
+
+	@IsString()
+	@IsOptional()
+	public DATABASE_PASSWORD?: string;
+
+	@IsString()
+	@IsOptional()
+	public DATABASE_NAME?: string;
+
+	@IsIn(["true", "false"])
+	@IsOptional()
+	public DATABASE_SSL?: string;
+
+	@IsIn(["true", "false"])
+	@IsOptional()
+	public DATABASE_SYNCHRONIZE?: string;
 }
 
 export function validateEnvironmentVariables(config: Record<string, unknown>): Record<string, unknown> {

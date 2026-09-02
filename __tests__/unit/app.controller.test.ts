@@ -5,7 +5,7 @@ import { AppService } from "../../src/app.service";
 
 describe("AppController", () => {
 	let appController: AppController;
-	const getHelloMock = jest.fn<() => string>(() => "Hello Protokol!");
+	const getHelloMock = jest.fn<string, []>(() => "Hello Protokol!");
 
 	beforeEach(async () => {
 		const app: TestingModule = await Test.createTestingModule({

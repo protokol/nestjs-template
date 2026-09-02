@@ -5,7 +5,9 @@ import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { configuration } from "./configuration/configuration";
 import { validateEnvironmentVariables } from "./configuration/environment-variables";
+import { DatabaseModule } from "./database/database.module";
 import { HealthModule } from "./health/health.module";
+import { NotesModule } from "./notes/notes.module";
 
 @Module({
 	imports: [
@@ -14,7 +16,9 @@ import { HealthModule } from "./health/health.module";
 			load: [configuration],
 			validate: validateEnvironmentVariables,
 		}),
+		DatabaseModule.forRoot(),
 		HealthModule,
+		NotesModule,
 	],
 	controllers: [AppController],
 	providers: [AppService],

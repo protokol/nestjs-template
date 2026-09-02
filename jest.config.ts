@@ -9,7 +9,14 @@ const config: Config = {
 		"^.+\\.(t|j)s$": "ts-jest",
 	},
 	setupFiles: ["reflect-metadata"],
-	collectCoverageFrom: ["src/**/*.(t|j)s", "!src/main.ts", "!src/**/*.module.ts"],
+	collectCoverageFrom: [
+		"src/**/*.(t|j)s",
+		"!src/main.ts",
+		"!src/**/*.module.ts",
+		"!src/**/*.entity.ts",
+		"!src/database/data-source.ts",
+		"!src/database/migrations/**",
+	],
 	coverageDirectory: "<rootDir>/.coverage",
 	coverageThreshold: {
 		global: {
