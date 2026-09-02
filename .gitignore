@@ -43,3 +43,7 @@ lerna-debug.log*
 # Build info & caches
 *.tsbuildinfo
 .eslintcache
+
+# Agent skills (tracked via skills-lock.json, refreshed by postinstall)
+/.claude/skills/
+/.agents/

@@ -28,7 +28,8 @@
 		"test:cov": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
 		"test:debug": "node --inspect-brk --experimental-vm-modules -r tsconfig-paths/register -r ts-node/register node_modules/jest/bin/jest.js --runInBand",
 		"test:e2e": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --config __tests__/e2e/jest-e2e.json",
-		"prepare": "husky"
+		"prepare": "husky",
+		"postinstall": "npx -y skills update -y --copy || true"
 	},
 	"lint-staged": {
 		"*.ts": [

@@ -1,0 +1,161 @@
+{
+	"version": 1,
+	"skills": {
+		"ask-questions-if-underspecified": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/ask-questions-if-underspecified/SKILL.md",
+			"computedHash": "37dd805e81aa4caa13397eea4392efcdf936731b477414b197da86f1db1466c2"
+		},
+		"brainstorming": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/brainstorming/SKILL.md",
+			"computedHash": "1d155beb4087b2b48bfb0d5922cde48eb0570022ac68ad2e30a32957c345039c"
+		},
+		"coding-discipline": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/coding-discipline/SKILL.md",
+			"computedHash": "a145858a351e491529a14b6da9dc0ed465c2bfdc2a693637ff82cf8f993cebb7"
+		},
+		"daily-bot-report": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/daily-bot-report/SKILL.md",
+			"computedHash": "d2afd871059990fe75200c441ce0d8c3428ecef8d725822b44e7938cbdc5ac35"
+		},
+		"dpp-template-ops": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/dpp-template-ops/SKILL.md",
+			"computedHash": "b9f6a8f72999135c38f0103870455cbafead8e8c28c588c870bbfcfc8fd2ac5a"
+		},
+		"executing-plans": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/executing-plans/SKILL.md",
+			"computedHash": "2c1ee784348228cd8b9e7e58bc0bf594e3a25a2efb49ab35d460d3ad208a7454"
+		},
+		"feature-pipeline": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/feature-pipeline/SKILL.md",
+			"computedHash": "2108c4236ee38b5e2b55c2b26514ed0da8cddb73b0521d5e4a29e80b62d744de"
+		},
+		"gh-cli": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/gh-cli/SKILL.md",
+			"computedHash": "ec68493b70b329c5ffd0cfe33bc256b7f7fd9af21078fd1e3f5c43b4231650d5"
+		},
+		"git-cleanup": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/git-cleanup/SKILL.md",
+			"computedHash": "b3f2374ef0d876be7bfe12069f78b7adc2dea7f5accc9a961774984f9337184f"
+		},
+		"planning-with-files": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/planning-with-files/SKILL.md",
+			"computedHash": "a7cb1ddb13fd3049bf85c85f788c9f97ef7c6083919efb4402775e1c23f00dde"
+		},
+		"pr-reviewer": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/pr-reviewer/SKILL.md",
+			"computedHash": "982b7b984c0cbd609506269a281215f553de08d1012cc8e54fafe5b3cfb83f5c"
+		},
+		"protokol-code-style": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/protokol-code-style/SKILL.md",
+			"computedHash": "992c639d1f7fff13524a7338bbb42b28fba9ebfbfaf9738da0e005c2714cc6fb"
+		},
+		"protokol-no-any-types": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/protokol-no-any-types/SKILL.md",
+			"computedHash": "a7b55120404a2885f5cfeff8a689af48168b8d9cdf0c55d5f7a93b70b19a76e6"
+		},
+		"protokol-workflow": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/protokol-workflow/SKILL.md",
+			"computedHash": "579fd75ece2492e0beb83a1e3342383204ae715de9c839381b042001e7faa690"
+		},
+		"review-code": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/review-code/SKILL.md",
+			"computedHash": "6f6dde415c54c13d473b0ba255e2462d2326f39e42822f40a2306f9f0c4ce6d7"
+		},
+		"security-dangerous-commands": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/security-dangerous-commands/SKILL.md",
+			"computedHash": "3c13305f619933d963f290644b5c486bd9d9b5c0a63e15779a0bc47b879a4e34"
+		},
+		"security-database": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/security-database/SKILL.md",
+			"computedHash": "f2d472fac48320645f9f5e039c1713a611b3f6090b0a43998672838812cffbb8"
+		},
+		"security-exfiltration-prevention": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/security-exfiltration-prevention/SKILL.md",
+			"computedHash": "0ecc8dfd2b54590cb90174af3cb61a72b470e7d613ecaedec305ac0772107190"
+		},
+		"security-file-protection": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/security-file-protection/SKILL.md",
+			"computedHash": "f1577092cb423463372c8c224bb6babe684e5f697cf30c3e8ca5679e003db446"
+		},
+		"security-git-safety": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/security-git-safety/SKILL.md",
+			"computedHash": "58e7c3b98701c4d0a5f3eefc50e3c0101d17b9aa7b0d7f215d9dcd62645a897b"
+		},
+		"security-package-install": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/security-package-install/SKILL.md",
+			"computedHash": "534eff7f829428b9a4983b249d825ca2d93e3561f1ac2a1fa48230d0718ff35f"
+		},
+		"security-prompt-injection": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/security-prompt-injection/SKILL.md",
+			"computedHash": "68f013fe0132ed3a914c9cc348e2d6142db8e5e2c859dcc79685b8dfe201128c"
+		},
+		"security-secret-protection": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/security-secret-protection/SKILL.md",
+			"computedHash": "ca89a1e7a006786c5fdd4564acf9dce61f56360dfa3c2540600680010d048ccd"
+		},
+		"ship": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/ship/SKILL.md",
+			"computedHash": "addcbe9a953b7a3847ca361eddffa5238ed82ea0064bce2cd28060ceac9344ed"
+		},
+		"simplify": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/simplify/SKILL.md",
+			"computedHash": "461c0f07998518845d061a10d3bfaec6209f202b2df0a600ebb7be7b46f16dbf"
+		},
+		"writing-plans": {
+			"source": "protokol/protokol-ai",
+			"sourceType": "github",
+			"skillPath": "skills/writing-plans/SKILL.md",
+			"computedHash": "c4930902bc3500e41bf35ae0f54fd6e2ae41f9caf4c72a2f143e008e862b8aea"
+		}
+	}
+}
