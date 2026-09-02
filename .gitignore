@@ -36,3 +36,10 @@ lerna-debug.log*
 
 # Coverage
 .coverage
+
+# Environment
+.env
+
+# Build info & caches
+*.tsbuildinfo
+.eslintcache

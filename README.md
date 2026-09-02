@@ -1,44 +1,61 @@
 ![Img](nestjs-template.png)
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[![Tests](https://github.com/protokol/nestjs-template/actions/workflows/tests.yml/badge.svg)](https://github.com/protokol/nestjs-template/actions/workflows/tests.yml)
 
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Requirements
+
+- Node.js `>= 24.9`
+- [pnpm](https://pnpm.io/installation) — any recent version; it switches automatically to the version pinned in the `packageManager` field.
+
 ## Installation
 
 ```bash
-$ yarn install
+$ pnpm install
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ yarn start
+$ pnpm start
 
 # watch mode
-$ yarn start:dev
+$ pnpm start:dev
 
 # production mode
-$ yarn start:prod
+$ pnpm start:prod
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ yarn test
+$ pnpm test
 
 # e2e tests
-$ yarn test:e2e
+$ pnpm test:e2e
 
 # test coverage
-$ yarn test:cov
+$ pnpm test:cov
+```
+
+## Lint & Format
+
+```bash
+# check lint
+$ pnpm lint
+
+# fix lint issues
+$ pnpm lint:fix
+
+# format with prettier
+$ pnpm format
 ```
 
 ## License
 
-This project is [MIT](LICENSE) licenced.
+This project is [MIT](LICENSE) licensed.
