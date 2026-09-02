@@ -17,7 +17,19 @@ describe("AppController (e2e)", () => {
 		await app.init();
 	});
 
+	afterEach(async () => {
+		await app?.close();
+	});
+
 	it("/ (GET)", () => {
 		return request(app.getHttpServer()).get("/").expect(200).expect("Hello Protokol!");
+	});
+
+	it("/health (GET)", async () => {
+		const response = await request(app.getHttpServer()).get("/health").expect(200);
+		const health = response.body as { status: string; uptime: number };
+
+		expect(health.status).toBe("ok");
+		expect(health.uptime).toBeGreaterThanOrEqual(0);
 	});
 });

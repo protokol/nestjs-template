@@ -17,6 +17,20 @@
 $ pnpm install
 ```
 
+## Environment configuration
+
+Copy the example file and adjust it to your needs:
+
+```bash
+$ cp .env.example .env
+```
+
+All variables are validated with [class-validator](https://github.com/typestack/class-validator) at startup (see `src/configuration/environment-variables.ts`); a bad value prevents the application from booting. To add a new variable:
+
+1. Add it to `.env.example`.
+2. Declare it with decorators in `EnvironmentVariables`.
+3. Read it in the `configuration` factory (`src/configuration/configuration.ts`).
+
 ## Running the app
 
 ```bash
@@ -30,6 +44,20 @@ $ pnpm start:dev
 $ pnpm start:prod
 ```
 
+## Health check
+
+The application exposes a `GET /health` endpoint suitable for liveness and readiness probes. Once a database or broker is introduced, migrate it to [`@nestjs/terminus`](https://docs.nestjs.com/recipes/terminus).
+
+## Docker
+
+```bash
+# build the image
+$ docker compose build
+
+# run it
+$ docker compose up
+```
+
 ## Test
 
 ```bash
@@ -39,7 +67,7 @@ $ pnpm test
 # e2e tests
 $ pnpm test:e2e
 
-# test coverage
+# test coverage (enforces thresholds from jest.config.ts)
 $ pnpm test:cov
 ```
 

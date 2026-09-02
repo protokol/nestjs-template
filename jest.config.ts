@@ -8,8 +8,17 @@ const config: Config = {
 	transform: {
 		"^.+\\.(t|j)s$": "ts-jest",
 	},
-	collectCoverageFrom: ["src/**/*.(t|j)s"],
+	setupFiles: ["reflect-metadata"],
+	collectCoverageFrom: ["src/**/*.(t|j)s", "!src/main.ts", "!src/**/*.module.ts"],
 	coverageDirectory: "<rootDir>/.coverage",
+	coverageThreshold: {
+		global: {
+			branches: 85,
+			functions: 90,
+			lines: 90,
+			statements: 90,
+		},
+	},
 };
 
 export default config;

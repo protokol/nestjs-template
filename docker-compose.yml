@@ -1,0 +1,9 @@
+services:
+    app:
+        build: .
+        ports:
+            - "3000:3000"
+        environment:
+            NODE_ENV: production
+        # Alternatively, provide your own variables with:
+        # env_file: .env

@@ -19,10 +19,14 @@
 		"incremental": true,
 		"skipLibCheck": true,
 		"strict": true,
-		"strictPropertyInitialization": false,
+		"strictPropertyInitialization": true,
 		"forceConsistentCasingInFileNames": true,
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitReturns": true,
+		"noImplicitOverride": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noUncheckedIndexedAccess": true,
 		"newLine": "lf",
 		"pretty": true
 	}

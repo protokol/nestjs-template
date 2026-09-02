@@ -41,7 +41,7 @@ jobs:
               run: pnpm build
 
             - name: Test Unit
-              run: pnpm test
+              run: pnpm test:cov
 
             - name: Test e2e
               run: pnpm test:e2e
