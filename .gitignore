@@ -45,5 +45,9 @@ lerna-debug.log*
 .eslintcache
 
 # Agent skills (tracked via skills-lock.json, refreshed by postinstall)
-/.claude/skills/
-/.agents/
+/.claude/skills/*
+!/.claude/skills/new-service
+/.agents/*
+!/.agents/skills/
+/.agents/skills/*
+!/.agents/skills/new-service
