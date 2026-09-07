@@ -1,4 +1,12 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:recommended", ":preserveSemverRanges", "schedule:earlyMondays"]
+	"extends": ["config:recommended", ":preserveSemverRanges", "schedule:earlyMondays"],
+	"minimumReleaseAge": "7 days",
+	"packageRules": [
+		{
+			"matchPackageNames": ["typescript"],
+			"allowedVersions": "<7.0.0 || >=7.1.0",
+			"description": "TS 7.0 ships tsc only, without the programmatic compiler API that @nestjs/cli needs, and typescript-eslint refuses to load under it. Both expect to be usable again on 7.1."
+		}
+	]
 }
