@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM node:24-alpine AS build
+FROM node:26-alpine AS build
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
@@ -10,7 +10,7 @@ COPY tsconfig.json tsconfig.build.json nest-cli.json ./
 COPY src ./src
 RUN pnpm build && pnpm install --prod --frozen-lockfile --ignore-scripts
 
-FROM node:24-alpine
+FROM node:26-alpine
 WORKDIR /app
 
 COPY --from=build /app/node_modules ./node_modules
